@@ -8,7 +8,7 @@ http://ec2-54-64-157-60.ap-northeast-1.compute.amazonaws.com/
 - LongUrlに短縮するURLを渡す。
 
 ```
-    POST http://example.com/api/v1/shortenurl
+    POST http://ec2-54-64-157-60.ap-northeast-1.compute.amazonaws.com/api/v1/shortenurl
     Content-Type: application/json
     {“LongUrl”: “http://www.recruit.jp/“}
 ```
