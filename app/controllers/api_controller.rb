@@ -1,6 +1,6 @@
 class ApiController < ApplicationController
   def shorten
-    url_base = "http://localhost:3000/"
+    url_base = "http://ec2-54-64-157-60.ap-northeast-1.compute.amazonaws.com/"
 
     base64 = Base64.strict_encode64(Digest::SHA1.digest(params['LongUrl']))
     base64 = base64.gsub(/\//,".")[0..7]

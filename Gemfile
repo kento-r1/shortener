@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'rspec-rails',    group: :development
-gem 'json_spec',    group: :development
+gem 'json_spec',    group: [:development,:test]
 
 
 
