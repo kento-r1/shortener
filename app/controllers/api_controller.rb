@@ -3,7 +3,8 @@ class ApiController < ApplicationController
     url_base = "http://ec2-54-64-157-60.ap-northeast-1.compute.amazonaws.com/"
 
     base64 = Base64.strict_encode64(Digest::SHA1.digest(params['LongUrl']))
-    base64 = base64.gsub(/\//,".")[0..7]
+    base64 = base64.gsub(/\//,".").gsub(/\+/,"_")[0..7]
+    
     url = Url.new(:base64 => base64, :location => params['LongUrl'])
     url.save
 

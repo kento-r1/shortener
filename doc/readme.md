@@ -51,6 +51,7 @@ http://ec2-54-64-157-60.ap-northeast-1.compute.amazonaws.com/
 
 # 処理速度の観点
 - 処理速度を確認したところ、どの操作のレスポンスも数msにで済むので、問題ないと思われる。
+- 同時アクセスを行ってみたが、問題なく動作した。
 
 # 工夫した部分
 - redirectの文面を改めるために、ApplicationControllerにredirect_toメソッドを再定義した。
