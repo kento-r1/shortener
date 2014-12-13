@@ -6,20 +6,22 @@ http://ec2-54-64-157-60.ap-northeast-1.compute.amazonaws.com/
 ## 短縮用APIへの入力
 - POSTとGETの入力を受け付ける。
 - LongUrlに短縮するURLを渡す。
+
+```
     POST http://example.com/api/v1/shortenurl
     Content-Type: application/json
     {“LongUrl”: “http://www.recruit.jp/“}
-
+```
 
 ## 出力
 - 短くなったURLと作成時刻が返される。 
-
+```
     {
 	 “ShortUrl”: “http://ec2-54-64-157-60.ap-northeast-1.compute.amazonaws.com/a84Aued”,
 	 “Created”: “1417457325”,
 	 “LongUrl”: “http://www.recruit.jp/“
 	}
-
+```
 
 # 使用したミドルウェア
 - Ruby on Rails
@@ -54,5 +56,6 @@ http://ec2-54-64-157-60.ap-northeast-1.compute.amazonaws.com/
 - redirectの文面を改めるために、ApplicationControllerにredirect_toメソッドを再定義した。
 
 # アピールポイント
-- Ruby on Rails上で簡潔にかかれているんで、極めて保守性が高い。
+- Ruby on Rails上で簡潔にかかれているので、極めて保守性が高い。
 - Rspecを用いて、一連のテストが書かれている。
+
